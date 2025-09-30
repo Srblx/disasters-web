@@ -46,8 +46,13 @@ app.use(
     next()
   },
   express.static(path.join(__dirname, 'static'), {
-    extensions: ['js', 'css', 'jpg'],
-    maxAge: 0
+    extensions: ['js', 'css', 'jpg', 'webp', 'avif'],
+    // Optimisation : Configuration du cache pour les ressources statiques
+    maxAge: '7d', // Cache de 7 jours
+    immutable: true, // Indique que le fichier ne changera pas
+    cacheControl: true,
+    lastModified: true,
+    etag: true
   })
 )
 

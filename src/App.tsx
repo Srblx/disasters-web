@@ -255,8 +255,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      {/* Optimisation : Utilisation d'images WebP avec fallback et lazy loading */}
       <div className="fixed inset-0 opacity-10 pointer-events-none">
-        <img src="http://localhost:5001/static/large.jpg" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" />
+        <picture>
+          <source
+            srcSet="http://localhost:5001/static/optimized/large-background.avif"
+            type="image/avif"
+          />
+          <source
+            srcSet="http://localhost:5001/static/optimized/large-background.webp"
+            type="image/webp"
+          />
+          <img
+            src="http://localhost:5001/static/optimized/large-background.jpg"
+            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
+            loading="lazy"
+            alt="Background texture"
+          />
+        </picture>
       </div>
       <div className="relative z-10 container mx-auto px-6 py-12">
         <header className="text-center mb-16">
