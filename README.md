@@ -107,3 +107,13 @@ Cette plateforme permet d'apprendre :
 **Bonne formation ! 🚀**
 
 *L'objectif est d'apprendre à identifier et corriger les problèmes de performance.*
+
+## Parcours de l'exercice
+
+Les instructions complètes se trouvent dans [`consigne.md`](./consigne.md) et les
+objectifs d'amélioration dans [`backlog.md`](./backlog.md).
+
+1. Réaliser un audit GreenIT initial dans `audit-initial.md`.
+2. Étudier le backlog et documenter le plan dans `plan.md`.
+3. Implémenter les optimisations retenues.
+4. Réaliser le même audit dans `audit-final.md`.
